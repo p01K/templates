@@ -1,0 +1,30 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -a'
+alias open='xdg-open'
+
+###########PACMAN SHORTCUTS######################
+alias pacman='sudo pacman'
+alias pacman.refresh='sudo pacman -Sy'
+alias pacman.install='sudo pacman -S'
+alias pacman.search='sudo pacman -Ss'
+################################################
+
+
+alias untar.bz2='tar xjf'
+
+######
+PS1='[\u@\h \W]\$ '
+
+
+
+# exports
+#
+export XAUTHORITY=/home/paul/.Xauthority
