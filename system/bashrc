@@ -18,9 +18,21 @@ alias pacman.search='sudo pacman -Ss'
 ################################################
 
 
-alias untar.bz2='tar xjf'
 
-######
+############Network shortcuts###################
+alias netstat.open_tcp='netstat -ltnep'
+
+
+#############/Network shortcuts#################
+
+
+############tar utils###########################
+alias tar.u_bz2='tar xjf'
+
+
+###########/tar utils###########################
+
+
 PS1='[\u@\h \W]\$ '
 
 
