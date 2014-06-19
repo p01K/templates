@@ -41,6 +41,11 @@ alias tar.e_bz2='tar xjf'
 
 ###########/tar utils###########################
 
+kate.noerr(){
+  kate "$@" 2> /dev/null &	
+}
+
+
 config_PS(){
 
 #Normal
