@@ -42,6 +42,7 @@ alias dmesg='dmesg -L' #add colours to the dmesg output
 
 ############tar utils###########################
 alias tar.e_bz2='tar xjf'
+alias tar.e_tar.gz='tar -zxvf'
 
 
 ###########/tar utils###########################
@@ -92,7 +93,8 @@ PS2='> '
 }
 
 
-setxkbmap -option 'ctrl:nocaps'
+setxkbmap -option 'ctrl:nocaps' #disable caps lock
+
 ###############exports#########################
 
 export EDITOR='vim'
