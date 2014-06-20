@@ -102,6 +102,6 @@ config_PS
 ###############exports#########################
 
 export EDITOR='vim'
-export XAUTHORITY=/home/paul/.Xauthority
+export XAUTHORITY=/home/$USER/.Xauthority
 
 ##################/exports#####################
