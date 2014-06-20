@@ -5,12 +5,12 @@ xftalpha 0.8
 update_interval 5.0
 total_run_times 0
 own_window yes
-own_window_type override
+own_window_type normal
 own_window_transparent yes
 own_window_colour hotpink
 own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
 double_buffer yes
-minimum_size 280 5
+#minimum_size 280 5
 draw_shades yes
 draw_outline no
 draw_graph_borders yes
@@ -42,9 +42,9 @@ ${color #5b6dad}Swap:$color$swap/$swapmax
 ${color #5b6dad} ${swapbar 6,140}
 
 ${color #5b6dad}ETH0 Down: $color${downspeed enp0s25}${alignr} k/s 
-${color #5b6dad} ${downspeedgraph eth0 16,140 000000 7f8ed3 150}
+${color #5b6dad} ${downspeedgraph enp0s25 16,140 000000 7f8ed3 150}
 ${color #5b6dad}ETH0 Up:   $color${upspeed enp0s25}${alignr} k/s 
-${color #5b6dad} ${upspeedgraph eth0 16,140 000000 7f8ed3 18}
+${color #5b6dad} ${upspeedgraph enp0s25  16,140 000000 7f8ed3 18}
 
 ${color #5b6dad}File systems:
 ${color #5b6dad}/       $color${fs_free /}
@@ -67,3 +67,6 @@ ${color #5b6dad} ${top_mem name 4}${offset -50} ${top_mem mem 4}
 
 ${color #5b6dad}# Connections   
 $color In: ${tcp_portmon 1 32767 count}  Out: ${tcp_portmon 32768 61000 count}${alignr}
+
+${exec feh --bg-scale "$(sed -n 's/wallpaper=//p' ~/.kde4/share/config/plasma-desktop-appletsrc)"}
+
