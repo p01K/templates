@@ -34,7 +34,7 @@ use_spacer no
 TEXT
 ${color #5b6dad}${alignc}${nodename} ${uptime_short}
 
-${color #5b6dad}CPU: ${color grey}$cpu%
+${color #5b6dad}CPU: ${color grey}$cpu% ${color grey}$freq Mhz
 ${color #5b6dad} ${cpugraph 16,140 000000 7f8ed3}
 ${color #5b6dad}RAM: $color$mem/$memmax
 ${color #5b6dad} ${membar 6,140}
@@ -46,10 +46,10 @@ ${color #5b6dad} ${downspeedgraph enp0s25 16,140 000000 7f8ed3 150}
 ${color #5b6dad}ETH0 Up:   $color${upspeed enp0s25}${alignr} k/s 
 ${color #5b6dad} ${upspeedgraph enp0s25  16,140 000000 7f8ed3 18}
 
-${color #5b6dad}File systems:
-${color #5b6dad}/       $color${fs_free /}
+${color #5b6dad}File systems(used space):
+${color #5b6dad}/       $color${fs_used /}
 ${color #5b6dad} ${fs_bar 6,140 /}
-${color #5b6dad}home $color${fs_free /home/p01}
+${color #5b6dad}home $color${fs_used /home/p01}
 ${color #5b6dad} ${fs_bar 6,140 /home/p01}
 
 ${color #5b6dad}Processes:$color $processes | $running_processes
@@ -67,6 +67,8 @@ ${color #5b6dad} ${top_mem name 4}${offset -50} ${top_mem mem 4}
 
 ${color #5b6dad}# Connections   
 $color In: ${tcp_portmon 1 32767 count}  Out: ${tcp_portmon 32768 61000 count}${alignr}
+
+${exec sensors | grep 'Core' }
 
 ${exec feh --bg-scale "$(sed -n 's/wallpaper=//p' ~/.kde4/share/config/plasma-desktop-appletsrc)"}
 
