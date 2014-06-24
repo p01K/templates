@@ -47,6 +47,11 @@ alias tar.e_tar.gz='tar -zxvf'
 
 ###########/tar utils###########################
 
+kate.noerr(){
+  kate "$@" 2> /dev/null &	
+}
+
+
 config_PS(){
 
 #Normal
