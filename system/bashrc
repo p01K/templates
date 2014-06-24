@@ -18,39 +18,34 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 ############ /generic #############################
 
-############ administrative #######################
-
-alias iotop='sudo iotop'
-
-############# /administrative #####################
 
 ########### PACMAN SHORTCUTS ######################
 alias pacman='sudo pacman'
 alias pacman.refresh='sudo pacman -Sy'
 alias pacman.install='sudo pacman -S'
 alias pacman.search='sudo pacman -Ss'
+alias pacman.sys_ugd='sudo pacman -Syu'
+alias pacman.rm='sudo pacman -R'
+alias pacman.rmr='sudo pacman -Rsn'  #also remove unused deps#
+alias pacman.dis='sudo pacman -Si'   #display extensive info
+alias pacman.orphan='sudo pacman -Qdt' #
 ########### /PACMAN SHORTCUTS #####################
 
 
 
-############Network shortcuts###################
+############ System shortcuts###################
 alias netstat.open_tcp='netstat -ltnep'
+alias dmesg='dmesg -L' #add colours to the dmesg output
 
-
-#############/Network shortcuts#################
+#############/System shortcuts#################
 
 
 ############tar utils###########################
 alias tar.e_bz2='tar xjf'
+alias tar.e_tar.gz='tar -zxvf'
 
 
 ###########/tar utils###########################
-
-
-kate.noerr(){
-  kate "$@" 2> /dev/null &	
-}
-
 
 config_PS(){
 
@@ -97,11 +92,14 @@ PS2='> '
 
 }
 
-config_PS
+
+setxkbmap -option 'ctrl:nocaps' #disable caps lock
 
 ###############exports#########################
 
 export EDITOR='vim'
-export XAUTHORITY=/home/paul/.Xauthority
+export XAUTHORITY=/home/$USER/.Xauthority
 
 ##################/exports#####################
+
+config_PS
