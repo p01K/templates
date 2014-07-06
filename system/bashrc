@@ -21,14 +21,15 @@ alias ....='cd ../../..'
 
 ########### PACMAN SHORTCUTS ######################
 alias pacman='sudo pacman'
-alias pacman.refresh='sudo pacman -Sy'
+alias pacman.refresh='sudo pacman -Sy' #update packet
 alias pacman.install='sudo pacman -S'
 alias pacman.search='sudo pacman -Ss'
-alias pacman.sys_ugd='sudo pacman -Syu'
+alias pacman.sys_ugd='sudo pacman -Syyu' #system upgrade
 alias pacman.rm='sudo pacman -R'
 alias pacman.rmr='sudo pacman -Rsn'  #also remove unused deps#
 alias pacman.dis='sudo pacman -Si'   #display extensive info
 alias pacman.orphan='sudo pacman -Qdt' #
+alias pacman.cc='sudo pacman -Scc' #clean caches
 ########### /PACMAN SHORTCUTS #####################
 
 
