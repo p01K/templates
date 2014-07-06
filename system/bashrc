@@ -35,9 +35,9 @@ alias pacman.cc='sudo pacman -Scc' #clean caches
 
 
 ############ System shortcuts###################
-alias netstat.open_tcp='netstat -ltnep'
+alias netstat.open_tcp='netstat -ltnep' #deprecated....
 alias dmesg='dmesg -L' #add colours to the dmesg output
-
+alias ss.tcp_l='ss -rplt'
 #############/System shortcuts#################
 
 
