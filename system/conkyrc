@@ -1,6 +1,6 @@
 background no
 use_xft yes
-xftfont Bitstream Vera Sans Mono:size=10
+xftfont Bitstream Vera Sans Mono:size=11
 xftalpha 0.8
 update_interval 4.0
 total_run_times 0
@@ -17,7 +17,7 @@ draw_graph_borders yes
 stippled_borders 8
 border_margin 4
 border_width 1
-maximum_width 170
+maximum_width 200
 default_color darkgrey
 default_shade_color black
 default_outline_color black
